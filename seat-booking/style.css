@@ -47,11 +47,11 @@ body {
 }
 
 .seat.selected {
-  background-color: #6feaf6;
+  background-color: #ffffff;
 }
 
 .seat.occupied {
-  background-color: #ffffff;
+  background-color: #ff0000;
 }
 
 .seat:nth-of-type(2) {
@@ -76,7 +76,7 @@ body {
   background: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   border-radius: 5px;
-  color: #777;
+  color: #eeeeee;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -111,5 +111,6 @@ p.text {
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #00ff2a;
+  font-size: 18px;
 }

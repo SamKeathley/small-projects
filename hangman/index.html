@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Hangman</h1>
-    <p>Find the hidden word</p>
+    <p>Enter a letter to save this stick figure!</p>
     <div class="game-container">
       <svg height="250" width="200" class="figure-container">
         <!--The Gallows-->
@@ -30,25 +30,16 @@
       </svg>
 
       <div class="wrong-letters-container">
-        <div id="wrong-letters">
-          <p>Wrong</p>
-          <span>e,r,t,y</span>
-        </div>
+        <div id="wrong-letters"></div>
       </div>
 
-      <div class="word" id="word">
-        <div class="letter">h</div>
-        <div class="letter">o</div>
-        <div class="letter">w</div>
-        <div class="letter">d</div>
-        <div class="letter">y</div>
-      </div>
+      <div class="word" id="word"></div>
     </div>
 
     <!--Final message container-->
     <div class="popup-container" id="popup-container">
       <div class="popup">
-        <h2 id="final-message">You Did It!</h2>
+        <h2 id="final-message"></h2>
         <button id="play-button">Play Again</button>
       </div>
     </div>

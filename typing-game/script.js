@@ -32,12 +32,22 @@ const words = [
   'cake',
 ];
 
-// Init word, score, and time
+// Init word, score, time, and difficulty (in local storage or adept)
 let randomWord;
 
 let score = 0;
 
 let time = 10;
+
+let difficulty =
+  localStorage.getItem('difficulty') !== null
+    ? localStorage.getItem('difficulty')
+    : 'adept';
+
+difficultySelect.value =
+  localStorage.getItem('difficulty') !== null
+    ? localStorage.getItem('difficulty')
+    : 'adept';
 
 // Focus on text on start
 text.focus();
@@ -91,7 +101,20 @@ text.addEventListener('input', (e) => {
     // Clear
     e.target.value = '';
 
-    time += 5;
+    if (difficulty === 'expert') {
+      time += 2;
+    } else if (difficulty === 'adept') {
+      time += 3;
+    } else {
+      time += 5;
+    }
+
     updateTime();
   }
+});
+
+settingsBtn.addEventListener('click', () => settings.classList.toggle('hide'));
+settingsForm.addEventListener('change', (e) => {
+  difficulty = e.target.value;
+  localStorage.setItem('difficulty', difficulty);
 });

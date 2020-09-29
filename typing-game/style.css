@@ -27,6 +27,8 @@ select {
   -moz-appearance: none;
   border-radius: 0;
   background-color: #a7c5e3;
+  border: none;
+  font-size: 12px;
 }
 
 select:focus,

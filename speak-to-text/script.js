@@ -119,4 +119,13 @@ closeBtn.addEventListener('click', () =>
   document.getElementById('text-box').classList.remove('show')
 );
 
+voicesSelect.addEventListener('change', (e) => {
+  message.voice = voices.find((voice) => voice.name === e.target.value);
+});
+
+readBtn.addEventListener('click', () => {
+  setTextMessage(textarea.value);
+  speakText();
+});
+
 getVoices();

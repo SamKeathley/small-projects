@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -12,7 +14,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Nova Flat', cursive;
 }
 
 body::after {

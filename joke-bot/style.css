@@ -22,6 +22,14 @@ body {
   background-repeat: no-repeat;
 }
 
+select {
+  color: #ffffff;
+  background: #ff3482;
+  font-size: 12px;
+  height: 30px;
+  width: 50%;
+}
+
 button {
   cursor: pointer;
   outline: none;

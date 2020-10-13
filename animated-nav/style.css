@@ -26,9 +26,20 @@ body {
   z-index: 9;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
 }
 
 nav,
@@ -75,6 +86,55 @@ nav li:nth-of-type(4) {
 }
 nav li:nth-of-type(5) {
   background-color: var(--navColor5);
+}
+
+.slide-in-1 {
+  animation: slide-in 0.4s linear 0.1s both;
+}
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+.slide-in-5 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 nav li a:hover {

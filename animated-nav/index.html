@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animated Nav</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -26,11 +28,100 @@
       <div class="bar3"></div>
     </div>
 
-    <section id="home"><a href="#" target="_blank">Sam Keathley</a></section>
-    <section id="about"><h1>Learn More About Me</h1></section>
-    <section id="skills"><h1>These Are My Strengths</h1></section>
-    <section id="projects"><h1>These Are My Results</h1></section>
-    <section id="contact"><h1>Available Anytime</h1></section>
+    <section id="home" class="home">
+      <a href="#" target="_blank">Sam Keathley</a>
+      <div class="intro">        
+        <h1>Hi. I'm Sam.</h1>
+          <span class="title">A Frontend Developer.</span>
+          <p class="sub">
+            I'm also a traditional artist with a keen eye for detail and bringing
+            ideas to life.
+          </p>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="info">
+        <h1>I'm Sam, a Frontend Developer looking for my next gig.</h1>
+        <p>
+          I've been a software developer (professionaly) for two years but have
+          been studying code for closer to three. My preferred home is in the
+          frontend, but I won't shy away from backend work with the right team,
+          company, or project.
+        </p>
+        <p>
+          When I'm not working, I enjoy creating creepy works of art, playing
+          with my dog, reading, and stomping goblins in D&D.
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <div class="blurb">
+        <h1>SKILLS</h1>
+        <p>I have been a member of an Agile team and have experience with test-driven development workflows.
+            Additionally, I have some
+            fullstack knowledge and have contributed to open source projects.</p>
+        <p>Where I really shine is on the frontend. In my toolbox, you'll most likely find:</p>
+        <ul class="my-skills">
+            <li class="SASS" style="color: #eb66a8;">
+                <i class="fab fa-sass" aria-hidden="true"></i>
+                <span class="sr-only">SASS</span>
+            </li>
+            <li class="HTML" style="color:  #ff581c;">
+                <i class="fab fa-html5" aria-hidden="true"></i>
+                <span class="sr-only">HTML5</span>
+            </li>
+            <li class="GIT" style="color: #f27935;">
+                <i class="fab fa-git-alt" aria-hidden="true"></i>
+                <span class="sr-only">Git</span>
+            </li>
+            <li class="SKETCH" style="color: #ffaa34;">
+                <i class="fab fa-sketch" aria-hidden="true"></i>
+                <span class="sr-only">Sketch</span>
+            </li>
+            <li class="JS" style="color: #fee905;">
+                <i class="fab fa-js-square" aria-hidden="true"></i>
+                <span class="sr-only">JavaScript</span>
+            </li>
+            <li class="REACT" style="color: #00e0e0;">
+                <i class="fab fa-react" aria-hidden="true"></i>
+                <span class="sr-only">ReactJS</span>
+            </li>
+            <li class="CSS" style="color: #05b8ff;">
+                <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                <span class="sr-only">CSS3</span>
+            </li>
+            <li class="GOOGLE" style="color: #1e90ff;">
+                <i class="fab fa-google" aria-hidden="true"></i>
+                <span class="sr-only">Google</span>
+            </li>
+        </ul>
+    </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="examples">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vel
+          error exercitationem doloremque harum nam deleniti odit sequi, ad
+          voluptatum, illo dolore veritatis laboriosam cumque nulla animi vitae.
+          Nihil, qui.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          corrupti fugit unde magnam fugiat totam non tempora culpa modi eum est
+          autem ipsam nihil perspiciatis quo, inventore necessitatibus eligendi
+          at?
+        </p>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="reach">
+        <h3>I'm available for hire!</h3>
+        <p>Have an exciting project and need some help bringing it to life?</p>
+        <a class="btn btn-light btn-lg" href="mailto: keathleysam@gmail.com">
+          EMAIL ME
+        </a>
+    </div>
+  </section>
 
     <script src="script.js"></script>
   </body>

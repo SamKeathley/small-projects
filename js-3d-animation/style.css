@@ -1,1 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* background-color: lightslategray; */
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  min-height: 80vh;
+  width: 35rem;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.eyeball {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeball img {
+  width: 20rem;
+  z-index: 2;
+}
+
+.circle {
+  width: 23rem;
+  height: 23rem;
+  background: linear-gradient(
+    to right,
+    rgba(245, 227, 66, 0.75),
+    rgba(8, 156, 65, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info h1 {
+  font-size: 3rem;
+}
+
+.info h3 {
+  font-size: 1.3rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors button {
+  padding: 0.5rem 2rem;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  color: #585858;
+}
+
+button.active {
+  background: #585858;
+  color: white;
+}
+
+.purchase {
+  margin-top: 5rem;
+}
+
+.purchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: slategray;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}

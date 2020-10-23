@@ -12,10 +12,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
-  /* background-color: lightslategray; */
   width: 50%;
   display: flex;
   align-items: center;
@@ -23,7 +23,8 @@ body {
 }
 
 .card {
-  min-height: 80vh;
+  transform-style: preserve-3d;
+  min-height: 70vh;
   width: 35rem;
   border-radius: 30px;
   padding: 0rem 5rem;
@@ -40,6 +41,7 @@ body {
 .eyeball img {
   width: 20rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
@@ -57,6 +59,7 @@ body {
 
 .info h1 {
   font-size: 3rem;
+  transition: all 0.75s ease-out;
 }
 
 .info h3 {
@@ -64,11 +67,13 @@ body {
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
+  transition: all 0.75s ease-out;
 }
 
 .colors {
   display: flex;
   justify-content: space-between;
+  transition: all 0.75s ease-out;
 }
 
 .colors button {
@@ -78,6 +83,7 @@ body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   cursor: pointer;
+  font-weight: bold;
   color: #585858;
 }
 
@@ -88,6 +94,7 @@ button.active {
 
 .purchase {
   margin-top: 5rem;
+  transition: all 0.75s ease-out;
 }
 
 .purchase button {

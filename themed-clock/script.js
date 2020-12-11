@@ -47,6 +47,7 @@ function setTime() {
   const date = time.getDate()
   const hours = time.getHours()
   const hoursForClock = hours % 12
+  const twelveHourFormat = hoursForClock ? hours : 12
   const minutes = time.getMinutes()
   const seconds = time.getSeconds()
   const ampm = hours >= 12 ? 'PM' : 'AM'
@@ -75,9 +76,9 @@ function setTime() {
     360
   )}deg)`
 
-  timeEl.innerHTML = `${hoursForClock}:${
-    minutes < 10 ? `0${minutes}` : minutes
-  }  ${ampm}`
+  timeEl.innerHTML = `${
+    hoursForClock < 12 ? `0${hoursForClock}` : twelveHourFormat
+  }:${minutes < 10 ? `0${minutes}` : minutes}  ${ampm}`
   dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
 }
 

@@ -1,0 +1,131 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #c9ced3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.player-container {
+  height: 50rem;
+  width: 40rem;
+  background-color: #dadee2;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+  height: 30rem;
+  width: 30rem;
+  position: relative;
+  top: -5rem;
+  left: 5rem;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  margin: 0.5rem 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 4rem 2rem;
+  height: 0.4rem;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -1.5rem;
+  left: 12rem;
+  width: 20rem;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.fas {
+  font-size: 3rem;
+  color: rgb(129, 129, 129);
+  margin-right: 3rem;
+}
+
+.fas:hover {
+  filter: brightness(80%);
+}
+
+.main-button {
+  font-size: 4rem;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-controls {
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 2.9rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .player-controls {
+    top: -1rem;
+    left: 10rem;
+  }
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Countdown</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,7 +16,7 @@
 
     <!-- Container -->
     <div class="container">
-      <div class="input-container" id="input-container" hidden>
+      <div class="input-container" id="input-container">
         <h1>Create a Custom Countdown!</h1>
         <form class="form" id="countdown-form">
           <label for="title">Title</label>
@@ -27,7 +26,7 @@
             placeholder="What are you counting down to?"
           />
           <label for="date-picker">Select a Date</label>
-          <input type="date" class="date-picker" />
+          <input type="date" id="date-picker" />
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -43,7 +42,7 @@
         <button id="countdown-button">Reset</button>
       </div>
       <!-- Complete -->
-      <div class="complete" id="complete">
+      <div class="complete" id="complete" hidden>
         <h1 class="complete-title">Countdown Complete!</h1>
         <h1 id="complete-info">Countdown Finished on 01-18-2021</h1>
         <button id="complete-button">New Countdown</button>

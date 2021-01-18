@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Container */
+.container {
+  min-width: 58rem;
+  min-height: 30.4rem;
+  color: black;
+  margin: 0 auto;
+  padding: 2.5rem 5rem;
+  border-radius: 0.5rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.input-container {
+  position: relative;
+  top: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.form {
+  width: 48rem;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  background: #fff;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 4rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  background: #b5a642;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+/* Countdown */
+ul {
+  margin-left: -4.5rem;
+}
+
+li {
+  display: inline-block;
+  font-size: 3rem;
+  list-style-type: none;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 8rem;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 6rem;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: #f60000;
+  }
+
+  25% {
+    color: #ff8c00;
+  }
+
+  50% {
+    color: #4de94c;
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: #3783ff;
+  }
+
+  100% {
+    color: #4815aa;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 60rem) {
+  .video-background {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  video {
+    object-fit: cover;
+    object-position: 70%;
+    margin-top: -1px;
+  }
+
+  .container {
+    min-width: unset;
+    width: 95vw;
+    min-height: 24.5rem;
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 1rem;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+  }
+
+  li span {
+    font-size: 4rem;
+  }
+}

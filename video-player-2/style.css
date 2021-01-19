@@ -175,13 +175,26 @@ video {
   margin-right: 1rem;
 }
 
+select,
+option {
+  cursor: pointer;
+}
+
 select {
+  background: transparent;
   color: var(--font-color);
   border: none;
   font-size: 1.8rem;
   position: relative;
   top: -2.5px;
   border-radius: 0.5rem;
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+select:focus {
+  outline: none;
 }
 
 select > option {

@@ -1,3 +1,4 @@
+const player = document.querySelector('.player');
 const video = document.querySelector('video');
 const progressRange = document.querySelector('.progress-range');
 const progressBar = document.querySelector('.progress-bar');
@@ -107,6 +108,46 @@ let changeSpeed = () => {
 
 // Fullscreen ------------------------------- //
 
+// View in fullscreen
+let openFullscreen = () => {
+  if (player.requestFullscreen) {
+    player.requestFullscreen();
+  } else if (player.webkitRequestFullscreen) {
+    /* Safari */
+    player.webkitRequestFullscreen();
+  } else if (player.msRequestFullscreen) {
+    /* IE11 */
+    player.msRequestFullscreen();
+  }
+  video.classList.add('video-fullscreen');
+};
+
+// Close fullscreen
+let closeFullscreen = () => {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
+  }
+  video.classList.remove('video-fullscreen');
+};
+
+let fullscreen = false;
+
+// Toggle fullscreen view
+let toggleFullscreen = () => {
+  if (!fullscreen) {
+    openFullscreen(player);
+  } else {
+    closeFullscreen();
+  }
+  fullscreen = !fullscreen;
+};
+
 // Event Listeners
 playBtn.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
@@ -116,3 +157,4 @@ progressRange.addEventListener('click', setProgress);
 volumeRange.addEventListener('click', changeVolume);
 volumeIcon.addEventListener('click', toggleMute);
 speed.addEventListener('change', changeSpeed);
+fullscreenBtn.addEventListener('click', toggleFullscreen);

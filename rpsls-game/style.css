@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 53rem;
+  height: 60rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem -0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  background: #990000;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.player-container {
+  margin: 5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.fas {
+  font-size: 5rem;
+  margin-right: 4rem;
+  user-select: none;
+}
+
+#player .fas,
+#player .choice {
+  color: #990000;
+  cursor: pointer;
+}
+
+#computer .fas,
+#computer .choice {
+  color: #009999;
+}
+
+#player .fas:last-of-type,
+#computer .fas:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  color: #000000 !important;
+}
+
+.reset-icon {
+  font-size: 3rem;
+  cursor: pointer;
+  margin-left: 5rem;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 4rem;
+  margin: unset;
+  margin-top: 2rem;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 60rem) {
+  .game-container {
+    width: 95%;
+    height: 58rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .player-container {
+    margin: 5rem 0 2.5rem 2.5rem;
+  }
+
+  .fas {
+    margin-right: 2rem;
+  }
+
+  .reset-icon {
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 37.6rem) {
+  .game-container {
+    height: 55rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .player-container {
+    margin: 4.3rem 0 2.5rem 2rem;
+  }
+
+  .fas {
+    font-size: 4.3rem;
+  }
+
+  .reset-icon {
+    margin-top: 1.5rem;
+  }
+
+  .result-container {
+    margin: 0 2rem;
+  }
+}

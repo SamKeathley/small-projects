@@ -27,6 +27,26 @@ let secondNumber = 0;
 let equationObject = {};
 const wrongFormat = [];
 
+const countdownStart = () => {
+  countdown.textContent = '3';
+  setTimeout(() => {
+    countdown.textContent = '2';
+  }, 1000);
+  setTimeout(() => {
+    countdown.textContent = '1';
+  }, 2000);
+  setTimeout(() => {
+    countdown.textContent = 'GO!';
+  }, 3000);
+};
+
+// navifate from spash to countdown page
+const showCountdown = () => {
+  countdownPage.hidden = false;
+  splashPage.hidden = true;
+  countdownStart();
+};
+
 // get value from selected radio btn
 const getRadioValue = () => {
   let radioValue;
@@ -43,6 +63,9 @@ const selectQuestionAmount = (e) => {
   e.preventDefault();
   questionAmount = getRadioValue();
   console.log('Question Amount:', questionAmount);
+  if (questionAmount) {
+    showCountdown();
+  }
 };
 
 startForm.addEventListener('click', () => {

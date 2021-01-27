@@ -31,6 +31,12 @@ const wrongFormat = [];
 
 // Scroll
 
+// Display game page
+let showGamePage = () => {
+  gamePage.hidden = false;
+  countdownPage.hidden = true;
+};
+
 // Get random number up to a max number
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
@@ -69,7 +75,43 @@ const createEquations = () => {
     equationsArray.push(equationObject);
   }
   shuffle(equationsArray);
-  console.log('Equations Array: ', equationsArray);
+};
+
+// Add equations to DOM
+const equationsToDOM = () => {
+  equationsArray.forEach((equations) => {
+    // Item
+    const item = document.createElement('div');
+    item.classList.add('tem');
+    // Equation Text
+    const equationText = document.createElement('h1');
+    equationText.textContent = equations.value;
+    // Append
+    item.appendChild(equationText);
+    itemContainer.appendChild(item);
+  });
+};
+
+// Dynamically adding correct/incorrect equations
+const populateGamePage = () => {
+  // Reset DOM, Set Blank Space Above
+  itemContainer.textContent = '';
+  // Spacer
+  const topSpacer = document.createElement('div');
+  topSpacer.classList.add('height-240');
+  // Selected Item
+  const selectedItem = document.createElement('div');
+  selectedItem.classList.add('selected-item');
+  // Append
+  itemContainer.append(topSpacer, selectedItem);
+
+  // Create Equations, Build Elements in DOM
+  createEquations();
+  equationsToDOM();
+  // Set Blank Space Below
+  const bottomSpacer = document.createElement('div');
+  bottomSpacer.classList.add('height-500');
+  itemContainer.appendChild(bottomSpacer);
 };
 
 const countdownStart = () => {
@@ -85,12 +127,13 @@ const countdownStart = () => {
   }, 3000);
 };
 
-// navifate from spash to countdown page
+// navigate from spash to countdown page
 const showCountdown = () => {
   countdownPage.hidden = false;
   splashPage.hidden = true;
   countdownStart();
-  createEquations();
+  populateGamePage();
+  setTimeout(showGamePage, 400);
 };
 
 // get value from selected radio btn

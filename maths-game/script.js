@@ -120,9 +120,7 @@ const scoresToDOM = () => {
 
 // Stop timer and process results then go to score page
 const checkTime = () => {
-  console.log(timePlayed);
   if (playerGuessArray.length == questionAmount) {
-    console.log('Player Guess Array: ', playerGuessArray);
     clearInterval(timer);
     // Check for wrong guesses, add penalty time
     equationsArray.forEach((equation, index) => {
@@ -188,10 +186,8 @@ const getRandomInt = (max) => {
 const createEquations = () => {
   // Randomly choose how many correct equations there should be
   const correctEquations = getRandomInt(questionAmount);
-  console.log('Correct Equations: ', correctEquations);
   // Set amount of wrong equations
   const wrongEquations = questionAmount - correctEquations;
-  console.log('Wrong Equations: ', wrongEquations);
 
   // Loop through, multiply random numbers up to 9, push to array
   for (let i = 0; i < correctEquations; i++) {
@@ -257,25 +253,27 @@ const populateGamePage = () => {
 };
 
 const countdownStart = () => {
-  countdown.textContent = '3';
-  setTimeout(() => {
-    countdown.textContent = '2';
+  let count = 3;
+  countdown.textContent = count;
+  const timeCountDown = setInterval(() => {
+    count--;
+    if (count === 0) {
+      countdown.textContent = 'Go!';
+    } else if (count === -1) {
+      showGamePage();
+      clearInterval(timeCountDown);
+    } else {
+      countdown.textContent = count;
+    }
   }, 1000);
-  setTimeout(() => {
-    countdown.textContent = '1';
-  }, 2000);
-  setTimeout(() => {
-    countdown.textContent = 'GO!';
-  }, 3000);
 };
 
 // navigate from spash to countdown page
 const showCountdown = () => {
   countdownPage.hidden = false;
   splashPage.hidden = true;
-  countdownStart();
   populateGamePage();
-  setTimeout(showGamePage, 4000);
+  countdownStart();
 };
 
 // get value from selected radio btn
@@ -293,7 +291,6 @@ const getRadioValue = () => {
 const selectQuestionAmount = (e) => {
   e.preventDefault();
   questionAmount = getRadioValue();
-  console.log('Question Amount:', questionAmount);
   if (questionAmount) {
     showCountdown();
   }

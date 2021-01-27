@@ -85,7 +85,7 @@ label {
 
 .selected-label {
   background: var(--select-color);
-  color: white;
+  color: #ffffff;
 }
 
 .best-score {
@@ -178,7 +178,7 @@ button {
   border-radius: 5px;
   font-size: 25px;
   font-family: Oxanium, sans-serif;
-  color: white;
+  color: #ffffff;
   border: none;
   outline: none;
 }

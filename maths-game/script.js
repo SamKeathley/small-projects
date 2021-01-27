@@ -20,6 +20,7 @@ const playAgainBtn = document.querySelector('.play-again');
 // Equations
 let questionAmount = 0;
 let equationsArray = [];
+let playerGuessArray = [];
 
 // Game Page
 let firstNumber = 0;
@@ -30,9 +31,22 @@ const wrongFormat = [];
 // Time
 
 // Scroll
+let valueY = 0;
+
+// Scroll and store user selection in playerGuessArray
+const select = (guessedTrue) => {
+  console.log('Player Guess Array: ', playerGuessArray);
+  // Scroll 40px
+  valueY += 40;
+  itemContainer.scroll(0, valueY);
+  // Add player guess to array
+  return guessedTrue
+    ? playerGuessArray.push('true')
+    : playerGuessArray.push('false');
+};
 
 // Display game page
-let showGamePage = () => {
+const showGamePage = () => {
   gamePage.hidden = false;
   countdownPage.hidden = true;
 };

@@ -21,6 +21,7 @@ let listArrays = [];
 
 // Drag Functionality
 let draggedItem;
+let dragging = false;
 let currentColumn;
 
 // Get Arrays from localStorage if available, set default values if not
@@ -118,10 +119,14 @@ const updateDOM = () => {
 const updateItem = (id, column) => {
   const selectedArray = listArrays[column];
   const selectedColumnEl = listColumns[column].children;
-  if (!selectedColumnEl[id].textContent) {
-    delete selectedArray[id];
+  if (!dragging) {
+    if (!selectedColumnEl[id].textContent) {
+      delete selectedArray[id];
+    } else {
+      selectedArray[id] = selectedColumnEl[id].textContent;
+    }
+    updateDOM();
   }
-  updateDOM();
 };
 
 // Add To Column List, Reset Textbox
@@ -150,31 +155,21 @@ const hideInputBox = (column) => {
 
 // Allow Arrays to Relect Drag & Drop Items
 const rebuildArrays = () => {
-  console.log(backlogList.children);
-  console.log(progressList.children);
-  backlogListArray = [];
-  for (let i = 0; i < backlogList.children.length; i++) {
-    backlogListArray.push(backlogList.children[i].textContent);
-  }
-  progressListArray = [];
-  for (let i = 0; i < progressList.children.length; i++) {
-    progressListArray.push(progressList.children[i].textContent);
-  }
-  completeListArray = [];
-  for (let i = 0; i < completeList.children.length; i++) {
-    completeListArray.push(completeList.children[i].textContent);
-  }
-  onHoldListArray = [];
-  for (let i = 0; i < onHoldList.children.length; i++) {
-    onHoldListArray.push(onHoldList.children[i].textContent);
-  }
+  backlogListArray = Array.from(backlogList.children.map((i) => i.textContent));
+  progressListArray = Array.from(
+    progressList.children.map((i) => i.textContent)
+  );
+  completeListArray = Array.from(
+    completeList.children.map((i) => i.textContent)
+  );
+  onHoldListArray = Array.from(onHoldList.children.map((i) => i.textContent));
   updateDOM();
 };
 
 // Drag Item Start
 const drag = (e) => {
   draggedItem = e.target;
-  console.log('Dragged Item: ', draggedItem);
+  dragging = true;
 };
 
 // Allow Item Drop In Column
@@ -198,6 +193,8 @@ const drop = (e) => {
   // Add Item to Column
   const parent = listColumns[currentColumn];
   parent.appendChild(draggedItem);
+  // Complete Dragging
+  dragging = false;
   rebuildArrays();
 };
 

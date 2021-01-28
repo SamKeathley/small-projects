@@ -102,6 +102,30 @@ const updateDOM = () => {
   updateSavedColumns();
 };
 
+// Add To Column List, Reset Textbox
+const addToColumn = (column) => {
+  const itemText = addItems[column].textContent;
+  const selectedArray = listArrays[column];
+  selectedArray.push(itemText);
+  addItems[column].textContent = '';
+  updateDOM();
+};
+
+// Show Add Item Input Box
+const showInputBox = (column) => {
+  addBtns[column].style.visibility = 'hidden';
+  saveItemBtns[column].style.display = 'flex';
+  addItemContainers[column].style.display = 'flex';
+};
+
+// Hide Item Input Box
+const hideInputBox = (column) => {
+  addBtns[column].style.visibility = 'visible';
+  saveItemBtns[column].style.display = 'none';
+  addItemContainers[column].style.display = 'none';
+  addToColumn(column);
+};
+
 // Allow Arrays to Relect Drag & Drop Items
 const rebuildArrays = () => {
   console.log(backlogList.children);

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  color: #54575a;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f8f7 49.91%,
+    #fff9f5 94.19%
+  );
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  width: 144rem;
+  height: 137.9rem;
+  margin: auto;
+}
+
+.brand-img {
+  position: absolute;
+  width: 19.3rem;
+  height: 4.764rem;
+  left: 22.1rem;
+  top: 5.025rem;
+}
+
+.title {
+  position: absolute;
+  width: 45.8rem;
+  height: 13.5rem;
+  left: 22.1rem;
+  top: 23.6rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 6.4rem;
+  line-height: 6.7rem;
+}
+
+.text {
+  position: absolute;
+  width: 39.4rem;
+  height: 9.6rem;
+  left: 22.7rem;
+  top: 40.3rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+
+.app-store-btn {
+  position: absolute;
+  width: 13.844rem;
+  height: 4.628rem;
+  left: 22.1rem;
+  top: 53.1rem;
+}
+
+.app-store-btn img {
+  width: 13.844rem;
+  height: 4.628rem;
+}
+
+.google-play-btn {
+  position: absolute;
+  width: 15.619rem;
+  height: 4.628rem;
+  left: 38.181rem;
+  top: 53.1rem;
+}
+
+.google-play-btn img {
+  width: 15.619rem;
+  height: 4.628rem;
+}
+
+.main-image-container {
+  position: absolute;
+  width: 53.572rem;
+  height: 30.927rem;
+  left: 68.328rem;
+  top: 22.973rem;
+}
+
+.main-image-container img {
+  height: 41.115rem;
+}
+
+.profile-img {
+  position: absolute;
+  height: 44.4rem;
+  left: 73.7rem;
+  right: 47.9rem;
+  top: 68.6rem;
+}
+
+.orders-img {
+  position: absolute;
+  height: 47rem;
+  left: 47.9rem;
+  right: 73.7rem;
+  top: 91.3rem;
+}
+
+.home-img {
+  position: absolute;
+  height: 47rem;
+  left: 99.5rem;
+  right: 22.1rem;
+  top: 90.8rem;
+}
+
+.cart-img {
+  position: absolute;
+  height: 22.2rem;
+  left: 22.1rem;
+  right: 99.5rem;
+  top: 115.7rem;
+}
+
+.product-img {
+  position: absolute;
+  height: 22.2rem;
+  left: 73.7rem;
+  right: 47.9rem;
+  top: 115.7rem;
+}

@@ -43,7 +43,7 @@ body {
 }
 
 .user-form input::placeholder {
-  color: #d4d4d4;
+  color: #e7e5e5;
 }
 
 .user-form input:focus {

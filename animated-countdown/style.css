@@ -49,6 +49,8 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .final.show {
@@ -68,10 +70,6 @@ h4 {
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
-}
-
-h1 {
-  text-transform: uppercase;
 }
 
 .nums {

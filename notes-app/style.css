@@ -63,6 +63,10 @@ body {
   padding: 2rem;
 }
 
+.main {
+  padding: 2rem;
+}
+
 .hidden {
   display: none;
 }

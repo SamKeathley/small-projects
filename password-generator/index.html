@@ -17,33 +17,52 @@
       <h2>Password Generator</h2>
       <div class="result-container">
         <span class="result" id="result"></span>
-        <button class="btn" id="clipboard">
+        <button class="btn" id="clipboard" title="Copy to Clipboard">
           <i class="far fa-clipboard"></i>
         </button>
       </div>
       <div class="settings">
         <div class="setting">
           <label>Password Length</label>
-          <input type="number" id="length" min="4" man="20" value="20" />
+          <input
+            type="number"
+            id="length"
+            min="4"
+            man="20"
+            value="20"
+            title="Number of Characters"
+          />
         </div>
         <div class="setting">
           <label>Include lowercase letters</label>
-          <input type="checkbox" id="lowercase" checked />
+          <input
+            type="checkbox"
+            id="lowercase"
+            title="Include Lowercase Letters"
+            checked
+          />
         </div>
         <div class="setting">
           <label>Include uppercase letters</label>
-          <input type="checkbox" id="uppercase" checked />
+          <input
+            type="checkbox"
+            id="uppercase"
+            title="Include Upperrcase Letters"
+            checked
+          />
         </div>
         <div class="setting">
           <label>Include numbers</label>
-          <input type="checkbox" id="numbers" checked />
+          <input type="checkbox" id="numbers" title="Include Numbers" checked />
         </div>
         <div class="setting">
           <label>Include symbols</label>
-          <input type="checkbox" id="symbols" checked />
+          <input type="checkbox" id="symbols" title="Include Symbols" checked />
         </div>
       </div>
-      <button class="btn btn-large" id="generate">Generate Password</button>
+      <button class="btn btn-large" id="generate" title="Generate Password">
+        Generate Password
+      </button>
     </div>
 
     <script src="script.js"></script>

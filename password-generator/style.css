@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 :root {
-  --primary-color: #3b3b98;
-  --secondary-color: #23235b;
+  --primary-color: #492835;
+  --secondary-color: #2c2f33;
 }
 
 * {
@@ -35,7 +35,7 @@ h2 {
 
 .container {
   background-color: var(--secondary-color);
-  box-shadow: 0 2px 1rem rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 1rem rgba(182, 182, 182, 0.2);
   padding: 2rem;
   width: 35rem;
   max-width: 100%;
@@ -87,4 +87,19 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem 0;
+}
+
+.setting input {
+  width: 15%;
+  text-align: center;
+}
+
+.setting input::-webkit-outer-spin-button,
+.setting input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.setting input[type='number'] {
+  -moz-appearance: textfield;
 }
